@@ -5,6 +5,11 @@ Dog::Dog() : Animal("Dog")
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
+Dog::Dog(std::string type) : Animal(type)
+{
+	std::cout << "Dog param constructor called" << std::endl;
+}
+
 Dog::Dog(const Dog &src) : Animal(src)
 {
 	std::cout << "Dog copy constructor called" << std::endl;

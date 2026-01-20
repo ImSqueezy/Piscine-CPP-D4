@@ -19,7 +19,7 @@ Cat::~Cat()
 	delete this->_brain;
 }
 
-Cat &Cat::operator=(const Cat &src)
+Cat &Cat::operator(const Cat &src)
 {
 	std::cout << "Cat Assignment Operator called" << std::endl;
 	if (this != &src)

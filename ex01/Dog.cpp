@@ -6,6 +6,12 @@ Dog::Dog() : Animal("Dog")
 	this->_brain = new Brain();
 }
 
+Dog::Dog(std::string idea) : Animal("Dog")
+{
+	std::cout << "Dog Parameterized Constructor called" << std::endl;
+	this->_brain = new Brain(idea);
+}
+
 Dog::Dog(const Dog &src) : Animal(src)
 {
 	std::cout << "Dog Copy Constructor called" << std::endl;

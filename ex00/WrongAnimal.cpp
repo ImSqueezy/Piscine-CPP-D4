@@ -7,7 +7,7 @@ WrongAnimal::WrongAnimal() : _type("WrongAnimal")
 
 WrongAnimal::WrongAnimal(std::string type) : _type(type)
 {
-	std::cout << "WrongAnimal type constructor called" << std::endl;
+	std::cout << "WrongAnimal param constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &src)

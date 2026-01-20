@@ -22,22 +22,17 @@ int main()
 	for (int i = 0; i < NUM_ANIMALS; i++)
 	{
 		if (i < NUM_ANIMALS / 2)
-		{
-			animals[i] = new Dog();
-			dynamic_cast<Dog*>(animals[i])->getBrain()->ideas[i] = "Dog Idea ";
-		}
+			animals[i] = new Dog("Dog Idea ");
 		else
-		{
-			animals[i] = new Cat();
-			dynamic_cast<Cat*>(animals[i])->getBrain()->ideas[i] = "Cat Idea ";
-		}
+			animals[i] = new Cat("Cat Idea ");
 	}
 
 	// std::cout << "--- Ideas ---" << std::endl;
 	// print_ideas(animals);
 
 	std::cout << "--- Deep Copy Test ---" << std::endl;
-	dynamic_cast<Dog*>(animals[0])->getBrain()->ideas[0] = "Original Idea";
+	Dog basic;
+	basic.getBrain()->ideas[0] = "Original Idea";
 	{
 		Dog tmp = *dynamic_cast<Dog*>(animals[0]);
 		tmp.getBrain()->ideas[0] = "New Idea";

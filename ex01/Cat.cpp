@@ -7,6 +7,13 @@ Cat::Cat()
 	this->_brain = new Brain();
 }
 
+Cat::Cat(std::string idea)
+{
+	std::cout << "Cat Parameterized Constructor called" << std::endl;
+	this->_type = "Cat";
+	this->_brain = new Brain(idea);
+}
+
 Cat::Cat(const Cat &src) : Animal(src)
 {
 	std::cout << "Cat Copy Constructor called" << std::endl;
